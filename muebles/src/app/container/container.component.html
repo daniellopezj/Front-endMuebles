@@ -1,0 +1,33 @@
+<div class="container">
+    <br>
+    <h1 style="text-align: center;"> Muebles UPTC</h1>
+    <br>
+    <div class="row" *ngFor="let object of lista">
+        <div class="col-md-1"></div>
+        <div class="col-md-9" style="align-content: center">
+            <div class="card-header">
+                <h5 class="card-title">{{object.nombre}}</h5>
+            </div>
+            <div class="row">
+                <div class="card-body example-card  col-md-6">
+                    <img [src]="object.image" class="card-img-top image" alt="Photo of a Shiba Inu">
+                </div>
+                <div class="card-body  col-md-6" style="text-align: left">
+                    <h5 class="card-title">{{object.nombre}}</h5>
+                    <p class="card-text text-justify">{{object.descripcion}}</p>
+                    <h5><b>Precio:</b> {{object.precio}}</h5>
+                    <h6><b>Cantidad:</b> {{object.cantidad}}</h6>
+                    <button mat-raised-button (click)="openDialog(object)" color="primary">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!--
+<router-outlet>
+
+</router-outlet>
+-->
